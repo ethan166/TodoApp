@@ -57,6 +57,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Create" id="ZMi-b4-HdL">
                             <connections>
                                 <action selector="addTaskButtonPressed:" destination="Y1n-Sd-Eig" id="IOe-Zw-L8n"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="createTask" id="tk3-Jz-gjT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,4 +111,7 @@
             <point key="canvasLocation" x="189.59999999999999" y="59.820089955022496"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tk3-Jz-gjT"/>
+    </inferredMetricsTieBreakers>
 </document>

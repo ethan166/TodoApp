@@ -34,6 +34,21 @@ class TasksTableViewController: UITableViewController {
         if let destination = segue.destination as? DisplayTaskViewController {
             destination.task = selected
         }
+        
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            
+            tasks.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
     }
     
     
